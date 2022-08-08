@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+html,
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div {
+	/* flex-shrink: 0; */
+	font-family: "Open Sans", sans-serif;
+    /* 注释此行伪元素实现就会出问题 */
+	position: relative;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	margin: 20px;
+	background: #ddd;
+	text-align: center;
+}
+
+.border {
+	border-left: 5px solid deeppink;
+}
+
+.pseudo::after {
+	content: "";
+	width: 5px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: deeppink;
+}
+
+.boxShadow {
+    box-shadow: -5px 0 deeppink;
+}
+
+.insertBoxShadow{
+    box-shadow: inset 5px 0 0 0 deeppink;
+}
+
+.filterDropShadow{
+    filter: drop-shadow(-5px 0 0 deeppink);
+}
+
+/* 没看懂 */
+.linearGradient{
+    background-image: linear-gradient(90deg, deeppink 0px, deeppink 5px, transparent 5px);
+}

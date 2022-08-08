@@ -7,3 +7,4 @@ yarn-error.log*
 dist/
 .vscode/
 .idea/
+.DS_Store
